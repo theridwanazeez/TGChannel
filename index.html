@@ -10,23 +10,34 @@
 
 <script>
 
+let delay = 4000; // 4 seconds
+let countdown = delay / 1000;
+
+function updateTimer(){
+    let el = document.getElementById("timer");
+    if(countdown > 0){
+        el.innerText = "Redirecting in " + countdown + "s...";
+        countdown--;
+    }
+}
+
 function openBrowser(){
 
-let url = "https://youtube.com/@realonedigitals2.0?sub_confirmation=1"
+    let url = "https://t.me/+8uJhOQaWnWxiNzRk";
 
-if(navigator.userAgent.includes("TikTok")){
-    
-    window.location.href = "intent://" + url.replace("https://","") + "#Intent;scheme=https;package=com.android.chrome;end";
-    
-}else{
-
-    window.location.href = url;
+    if(navigator.userAgent.includes("TikTok")){
+        window.location.href = "intent://" + url.replace("https://","") + "#Intent;scheme=https;package=com.android.chrome;end";
+    } else {
+        window.location.href = url;
+    }
 
 }
 
-}
+// countdown display
+setInterval(updateTimer, 1000);
 
-setTimeout(openBrowser,#);
+// redirect after delay
+setTimeout(openBrowser, delay);
 
 </script>
 
@@ -36,11 +47,11 @@ setTimeout(openBrowser,#);
 
 <div class="container-fluid text-center">
 
-<h2>Click the 3 dots ...⤸ at the top-right corner of this page, then Press "Open in browser"</h2>
+<h2>Click the 3 dots ...⤸ at the top-right corner, then tap "Open in browser"</h2>
 
-<p>And it will work</p>
+<p id="timer">Redirecting...</p>
 
-<a href="https://youtube.com/@realonedigitals2.0?sub_confirmation=1" target="_blank" class="btn btn-danger btn-lg">
+<a href="https://t.me/+8uJhOQaWnWxiNzRk" target="_blank" class="btn btn-danger btn-lg mt-3">
 Start Now
 </a>
 
