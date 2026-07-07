@@ -42,102 +42,53 @@ body{
     position:relative;
 }
 
-/* Arrow */
-
-.arrow{
-    position:absolute;
-    top:110px;
-    right:35px;
-    font-size:90px;
-    color:#ff3b30;
-    transform:rotate(-20deg);
-    animation:bounce 1s infinite;
-    text-shadow:
-    0 0 10px #ff3b30,
-    0 0 25px #ff3b30,
-    0 0 45px #ff3b30;
-}
-
-@keyframes bounce{
-
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-12px) rotate(-20deg);
-}
-
-100%{
-transform:translateY(0);
-}
-
-}
-
 h1{
-
-font-size:44px;
-font-weight:800;
-line-height:1.2;
-margin-top:20px;
-
+    font-size:44px;
+    font-weight:800;
+    line-height:1.2;
+    margin-top:20px;
 }
 
 .dots{
-
-font-size:52px;
-letter-spacing:8px;
-
+    font-size:52px;
+    letter-spacing:8px;
 }
 
 .yellow{
-
-color:#FFC107;
-font-weight:bold;
-
+    color:#FFC107;
+    font-weight:bold;
 }
 
 .btn-main{
-
-background:#0d6efd;
-border:none;
-padding:18px;
-font-size:30px;
-font-weight:bold;
-border-radius:18px;
-width:100%;
-margin-top:35px;
-box-shadow:0 8px 25px rgba(13,110,253,.45);
-
+    background:#0d6efd;
+    border:none;
+    padding:18px;
+    font-size:30px;
+    font-weight:bold;
+    border-radius:18px;
+    width:100%;
+    margin-top:35px;
+    box-shadow:0 8px 25px rgba(13,110,253,.45);
+    transition:.3s;
 }
 
 .btn-main:hover{
-
-background:#0b5ed7;
-
+    background:#0b5ed7;
 }
 
 @media(max-width:500px){
 
-.arrow{
+    h1{
+        font-size:34px;
+    }
 
-font-size:75px;
-right:25px;
-top:95px;
+    .btn-main{
+        font-size:24px;
+    }
 
-}
-
-h1{
-
-font-size:34px;
-
-}
-
-.btn-main{
-
-font-size:24px;
-
-}
+    .dots{
+        font-size:46px;
+    }
 
 }
 
@@ -151,9 +102,8 @@ font-size:24px;
 
 <div class="phone-wrap">
 
-<img src="phone.png" class="phone">
-
-<div class="arrow">↗</div>
+    <!-- Save your screenshot as phone.png in the same folder -->
+    <img src="phone.png" class="phone" alt="TikTok Browser">
 
 </div>
 
